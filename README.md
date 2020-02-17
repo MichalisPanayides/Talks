@@ -1,2 +1,2 @@
 # Talks
-Repository for talks/posters/presentations
+Repository for talks, posters and presentations
