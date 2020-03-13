@@ -1,0 +1,23 @@
+Slide 1:
+    - Interaction between UK Event Medical Services and Emergency Department (Ambulance service - Hospital)
+    - Patient flow from ambulance to treatment
+    - Two patient types: Ambulance, others
+    - Within 4 hours to start recieving treatment
+    - Proportion of patients within 4 hours decrease - caused by rising demand in A&E departments
+
+Slide 2:
+    - An attempt ot fix by the ED staff: leave patients outside in ambulances
+    - Timer does not start unless they enter the hospital,
+    - Which is great: better to wait inside the ambulance with a paramedic
+    - BUT creates a mess outside the ED
+    - AND ambulances remain blocked and can't collect other patients
+
+Slide 3:
+    - Model of the system
+    - Other patients arrive directly
+    - Ambulance Patients arrive at parking and then proceed
+    - Representative model: Blocked ambulances
+
+Slide 4:
+    - Game between two hospitals and an ambulance
+    - Blocking times
