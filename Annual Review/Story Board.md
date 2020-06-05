@@ -1,37 +1,33 @@
 # **Story Board**:
 
-### **Intro**
-
 ### **Contents of Annual Review**
 - Game Theory course
 - PhD progress
 
-# Game Theory course
+# 1. Game Theory course
 
-### **Normal Form Games**
+### **1.1. Intro**
 
-### **Nash Equilibrium - Pareto-Optimality**
+### **1.2. Normal Form Games**
 
-### **Lemke-Howson Algorithm - example**
+### **1.3. Nash Equilibrium - Pareto-Optimality**
 
-### **Iterative removal of strictly dominated strategies**
+### **1.4. Computing the Nash Equilibrium**
 
-### **Perfect information extensive-form games**
+### **1.5. Perfect information extensive-form games**
 
-### **Pirates Example**
+### **1.6. Backward Induction - Pirates Example**
 
-# PhD Progress
+### **1.7. Imperfect information extensive-form game**
 
-### **Motivation - The problem**
+# 2. PhD Progress
 
-### **Formulation**
+### **2.1. Motivation - The problem**
 
-### **Markov chain**
+### **2.2. Formulation**
 
-### **State probabilities - Heatmap gif**
+### **2.3. Markov chain**
 
-### **Waiting times - Plots**
+### **2.4. Outputs**
 
-### **Simulation - Optimal patient distribution**
-
-### **Picture Slide**
+### **2.5. Picture Slide**
