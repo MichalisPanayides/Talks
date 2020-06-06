@@ -156,15 +156,20 @@
 % Slide 5 - Example
 \begin{frame}
     \frametitle{Rock-Paper-Scissors}
-    
-    \centering
-    \hspace{1cm}
-    \includegraphics[width=.3\textwidth]{Bin/rock-paper-scissors.png} \\
-    
-    \setlength{\columnsep}{0.1pt}
-    \begin{multicols}{2}
-        \includegraphics[width=.25\textwidth, angle=270]{Bin/rock-paper-scissors.png}
 
+    \hfuzz = 37pt
+    \hspace{3.9cm}
+    \vspace{-1cm}
+    \includegraphics[width=.39\textwidth]{Bin/rock-paper-scissors.png}
+
+    % \setlength{\columnsep}{1pt}
+    \begin{multicols}{3}
+        \begin{flushright}
+            \includegraphics[width=.25\textwidth, angle=270]{Bin/rock-paper-scissors.png}
+        \end{flushright}
+            
+        \columnbreak
+ 
         \begin{equation*}
             \begin{bmatrix}
                 (0,0) & (1,-1) & (-1,1) \\
@@ -174,6 +179,9 @@
                 (1,-1) & (-1,1) & (0,0)
             \end{bmatrix}
         \end{equation*}
+
+        \columnbreak
+        \vfill
     \end{multicols}
 
 \end{frame}
