@@ -1,4 +1,36 @@
 \begin{frame}
+    \frametitle{Ambulance - Hospital Interface}
+    \centering
+    \begin{tikzpicture}[-, node distance = 3cm, scale=0.8]
+        \node[anchor=north](H1){\(H_1\)};
+        \node[anchor=north](H1_d1) at (3, 2){.};
+        \node[anchor=north](H1_d2) at (3, -2){.};
+
+        \path[->] (H1) edge node {}(H1_d1);
+        \path[->] (H1) edge node {}(H1_d2);
+        \path (H1_d1) edge [bend left] node {}(H1_d2);
+        \path (H1_d1) [dashed] edge node {}(H1_d2);
+
+        \node[anchor=north](H2) at (3.9, 0){\(H_2\)};
+        \node[anchor=north](H2_d1) at (6.9, 2){.};
+        \node[anchor=north](H2_d2) at (6.9, -2){.};
+
+        \path[->] (H2) edge node {}(H2_d1);
+        \path[->] (H2) edge node {}(H2_d2);
+        \path(H2_d1) edge [bend left] node {}(H2_d2);
+
+        \node[anchor=north](A) at (7.8, 0){\(A\)};
+        \node[anchor=north](A_d1) at (10.8, 2){.};
+        \node[anchor=north](A_d2) at (10.8, -2){.};
+        
+        \path[->] (A) edge node {}(A_d1);
+        \path[->] (A) edge node {}(A_d2);
+        \path(A_d1) edge [bend left] node {}(A_d2);
+    \end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}
     \frametitle{Hospital Formulation}
 
     \vspace*{0.5cm}
@@ -36,36 +68,4 @@
     
         \end{tikzpicture}
     \end{figure}
-\end{frame}
-
-
-\begin{frame}
-    \frametitle{Ambulance - Hospital Interface}
-    \centering
-    \begin{tikzpicture}[-, node distance = 3cm, scale=0.8]
-        \node[anchor=north](H1){\(H_1\)};
-        \node[anchor=north](H1_d1) at (3, 2){.};
-        \node[anchor=north](H1_d2) at (3, -2){.};
-
-        \path[->] (H1) edge node {}(H1_d1);
-        \path[->] (H1) edge node {}(H1_d2);
-        \path (H1_d1) edge [bend left] node {}(H1_d2);
-        \path (H1_d1) [dashed] edge node {}(H1_d2);
-
-        \node[anchor=north](H2) at (3.9, 0){\(H_2\)};
-        \node[anchor=north](H2_d1) at (6.9, 2){.};
-        \node[anchor=north](H2_d2) at (6.9, -2){.};
-
-        \path[->] (H2) edge node {}(H2_d1);
-        \path[->] (H2) edge node {}(H2_d2);
-        \path(H2_d1) edge [bend left] node {}(H2_d2);
-
-        \node[anchor=north](A) at (7.8, 0){\(A\)};
-        \node[anchor=north](A_d1) at (10.8, 2){.};
-        \node[anchor=north](A_d2) at (10.8, -2){.};
-        
-        \path[->] (A) edge node {}(A_d1);
-        \path[->] (A) edge node {}(A_d2);
-        \path(A_d1) edge [bend left] node {}(A_d2);
-    \end{tikzpicture}
 \end{frame}
