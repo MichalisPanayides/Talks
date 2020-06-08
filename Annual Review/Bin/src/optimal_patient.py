@@ -24,5 +24,5 @@ abg.make_plot_two_hospitals_arrival_split(
     runtime=10000,
 )
 
-plt.savefig("optimal_patient.png", transparent=True)
+plt.savefig("optimal_patient.pdf", transparent=True)
 plt.close()

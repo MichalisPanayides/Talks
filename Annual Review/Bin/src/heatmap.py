@@ -18,5 +18,5 @@ abg.get_heatmaps(
     seed_num=0,
 )
 
-plt.savefig("heatmap.png", transparent=True)
+plt.savefig("heatmap.pdf", transparent=True)
 plt.close()

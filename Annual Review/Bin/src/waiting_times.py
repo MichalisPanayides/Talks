@@ -23,5 +23,5 @@ abg.get_plot_comparing_times(
     accuracy=10
 )
 
-plt.savefig("waiting_times.png", transparent=True)
+plt.savefig("waiting_times.pdf", transparent=True)
 plt.close()
