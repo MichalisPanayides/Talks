@@ -9,7 +9,7 @@
 - N-players
 - Each player has actions
 - Different set of actions
-- Utility functions: mapping of the product of different actions to a real number
+- Utility function (for every player): maps an element of the cross product of all strategy spaces to the real numbers
 
 - Rock Paper Scissors: 
     - 2 players (row player: P1, column player: P2)
@@ -17,15 +17,16 @@
     - Utilities - 3 outcomes (P1 payoff, P2 payoff)
 
 ### **1.3. Nash Equilibrium - Pareto-Optimality**
+- Given the actions of others a NE is satisfied if:
+    - Each player maximises their payoff
+    - Nobody has an incentive to deviate
+    - If someone has an incentive to deviate the solution is not a NE
 - Prisoner's Dilemma game - discuss
 - Best responses 
 - Looking only at Player 1's perspective
 - Player 2's perspective
 - The pure strategy NE: DD
-- Given the actions of others a NE is satisfied if:
-    - Each player maximises their payoff
-    - Nobody has an incentive to deviate
-    - If someone has an incentive to deviate the solution is not a NE
+
 
 - Pareto optimality concept - looks at outcomes
 - Cell-1 is pareto-dominated by Cell-2 if for all players' Cell-2 >= Cell-1
@@ -58,12 +59,15 @@
 ### **1.7. Imperfect information extensive-form game**
 - Extensive form game with partial information
 - Players may be unaware of the previous players choices
+- Moving on to PhD progress - questions
 
 # 2. PhD Progress
 
 ### **2.1. Motivation - The problem**
 - Ambulance service and ED interaction
 - Set of regulations: 95% of patients - 4 hours between arrival-service
+- Causes ambulances blockage in an attempt to satisfy regulations
+
 - Normally: 
     1. Ambulance arrives
     2. Patient enters hospital
@@ -73,7 +77,29 @@
     2. May be blocked outside - timer never starts
     3. Ambulances remain blocked outside
 
-### **2.2. Formulation**
+
+### **2.2. Simulation - Markov Chain**
+- DES model - Markov chain model
+- Other patient arrives -> moves to hospital
+- Ambulance patient arrives -> based on threshold (e.g.)
+- Parameters
+- (u,v) - (hospital, parking)
+- From state (0,0) -> ...
+
+
+### **2.3. Outputs**
+- Getting performance measures we need $\pi$
+- Solving the following equations where ...
+- State probabilities for larger such model
+- System is mostly in states (0,2) - (0,6)
+
+- Having $\pi$ the waiting time is needed.
+- Recursive formula
+- Waiting times via simulation and via Markov chains model as arrivals increase
+
+
+
+### **2.4. Future Plans**
 - Interface between hospitals and ambulances
 - Imperfect-Information Extensive form game:
     - Hospital 1 chooses a threshold
@@ -83,25 +109,10 @@
     - Hospitals: Satisfy waiting time targets
     - Ambulance: Efficiently distribute patients 
 
-- Hospital formulation:
-    - Other patient arrives -> moves to hospital
-    - Ambulance patient arrives -> based on threshold (e.g.)
-
-### **2.3. Markov chain**
-- Parameters
-- From state (0,0) -> ...
-
-### **2.4. Outputs**
-- State probabilities for larger such model
-- System is mostly in states (0,2) - (0,6)
-
-- Waiting times via simulation and via Markov chains model as arrivals increase
-- To show the consistency of results
-
-- Blocking times of two hospitals with different parameters and strategies
-- Optimal patient distribution at intersection
-
-### **2.5. Picture Slide**
 - Future plans revolve around:
     - Getting all performance measures
     - Building a game theoretic interface
+
+- Papers:
+    - Two waiting rooms
+    - Game theoretic model of the EMS-ED interface
