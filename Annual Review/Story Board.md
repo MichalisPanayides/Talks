@@ -67,7 +67,7 @@
 - Ambulance service and ED interaction
 - Imperfect Information Extensive form game
 
-- Set of regulations: 95% of patients - 4 hours between arrivals-services
+- Set of regulations: 95% of patients within 4 hours
 - Causes ambulances blockage in an attempt to satisfy regulations
 - Not necessarily a bad plan - but to what extend?
 
@@ -82,8 +82,10 @@
 
 
 ### **2.2. Simulation - Markov Chain**
+- Build queueing theory model to get utilities of game theoretic model 
 - DES model - Markov chain model
 - Parameters
+- threshold: people in system s.t. block ambulances
 - (u,v) - (hospital, parking)
 - From state (0,0) -> ...
 
@@ -92,8 +94,8 @@
 - Getting performance measures we need $\pi$
 - Solving the following equations where ...
 
-- State probabilities for larger such model
-- System is mostly in states (0,2) - (0,6)
+- Heatmap of state probabilities for larger such model
+- System is mostly in states (0,2) - (0,5)
 
 - Waiting time with $\pi$.
 - Recursive formula
@@ -111,9 +113,9 @@
     - Hospitals: Satisfy waiting time targets
     - Ambulance: Efficiently distribute patients 
 
-- Blocking times - used by ambulance service
-- Getting all performance measures
-- Building a game theoretic interface
+- To determine strategies of ambulance service need time blocked
+- Blocking times of 2 hospitals as we vary the arrivals to them
+- Point of intersection should be ambulance service strategy
 
 - Papers:
     - Two waiting rooms
