@@ -1,0 +1,120 @@
+\begin{frame}
+    \frametitle{Computing the Nash Equilibria}
+    \begin{itemize}
+        \item Lemke-Howson Algorithm
+        \item Support Enumeration 
+        \item Iterative removal of strictly dominated strategies
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            P1\setminus P2 & L & C & R \\
+            U & (3,0) & (2,1) & (0,0) \\
+            M & (1,1) & (1,1) & (5,0) \\
+            D & (0,1) & (4,2) & (0,1) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            P1\setminus \textcolor{red}{P2} & L & C & \textcolor{red}{R} \\
+            U & (3,0) & (2,\underline{1}) & \textcolor{red}{(0,0)} \\
+            M & (1,1) & (1,\underline{1}) & \textcolor{red}{(5,0)} \\
+            D & (0,1) & (4,\underline{2}) & \textcolor{red}{(0,1)} \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            P1\setminus P2 & L & C \\
+            U & (3,0) & (2,1) \\
+            M & (1,1) & (1,1) \\
+            D & (0,1) & (4,2) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            \textcolor{red}{P1} \setminus P2 & L & C \\
+            U & (\underline{3},0) & (\underline{2},1) \\
+            \textcolor{red}{M} & \textcolor{red}{(1,1)} & \textcolor{red}{(1,1)} \\
+            D & (0,1) & (4,2) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            P1\setminus P2 & L & C \\
+            U & (3,0) & (2,1) \\
+            D & (0,1) & (4,2) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            P1\setminus \textcolor{red}{P2} & \textcolor{red}{L} & C \\
+            U & \textcolor{red}{(3,0)} & (2,\underline{1}) \\
+            D & \textcolor{red}{(0,1)} & (4,\underline{2}) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            P1\setminus P2 & C \\
+            U & (2,1) \\
+            D & (4,2) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            \textcolor{red}{P1}\setminus P2 & C \\
+            \textcolor{red}{U} & \textcolor{red}{(2,1)} \\
+            D & (\underline{4},2) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Iterative Removal of Strictly Dominated Strategies}
+    \begin{equation*}
+        \begin{matrix}
+            P1\setminus P2 & C \\
+            D & (4,2) \\
+        \end{matrix}
+    \end{equation*}
+\end{frame}

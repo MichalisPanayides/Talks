@@ -1,0 +1,137 @@
+% Slide 1
+\begin{frame}
+    \frametitle{Nash Equilibrium}
+    \centering
+    \begin{equation*}
+        \begin{bmatrix}
+            (3,3) & (0,5) \\
+            (5,0) & (1,1)
+        \end{bmatrix}
+    \end{equation*}
+
+    \tikz[overlay] {
+        \node (arrow_1_end) at (-1.5, 1.2) {\Large{C}};
+        \node (arrow_2_end) at (-1.5, 0.7) {\Large{D}};
+        \node (arrow_1_end) at (-0.6,1.8) {\Large{C}};
+        \node (arrow_2_end) at (0.6,1.8) {\Large{D}};
+        }
+\end{frame}
+
+
+% Slide 2
+\begin{frame}
+    \frametitle{Nash Equilibrium}
+    
+    \centering
+    
+    \begin{equation*}
+        \begin{bmatrix}
+            (3,-) & (0,-) \\
+            (\underline{5},-) & (\underline{1},-)
+        \end{bmatrix}
+    \end{equation*}
+
+    \tikz[overlay] {
+        \node (arrow_1_start) at (-3, 1.2) {\Large{C}};
+        \node (arrow_1_end) at (-1.5, 1.2) {};
+
+        \node (arrow_2_start) at (-3, 0.7) {\Large{D}};
+        \node (arrow_2_end) at (-1.5, 0.7) {};
+
+        \draw[->, very thick, red] (arrow_1_start) -- (arrow_1_end);
+        \draw[->, very thick, red] (arrow_2_start) -- (arrow_2_end);
+        }
+\end{frame}
+
+
+% Slide 3
+\begin{frame}
+    \frametitle{Nash Equilibrium}
+    
+    \centering
+    
+    \begin{equation*}
+        \begin{bmatrix}
+            (-,3) & (-,\underline{5}) \\
+            (-,0) & (-,\underline{1})
+        \end{bmatrix}
+    \end{equation*}
+
+    \tikz[overlay] {
+        \node (arrow_1_start) at (-0.6,3) {\Large{C}};
+        \node (arrow_1_end) at (-0.6,1.5) {};
+
+        \node (arrow_2_start) at (0.6,3) {\Large{D}};
+        \node (arrow_2_end) at (0.6,1.5) {};
+
+        \draw[->, very thick, red] (arrow_1_start) -- (arrow_1_end);
+        \draw[->, very thick, red] (arrow_2_start) -- (arrow_2_end);
+        }
+\end{frame}
+
+
+% Slide 4
+\begin{frame}
+    \frametitle{Nash Equilibrium}
+    
+    \centering
+    \begin{equation*}
+        \begin{bmatrix}
+            (3,3) & (0,\underline{5}) \\
+            (\underline{5},0) & (\underline{1},\underline{1})
+        \end{bmatrix}
+    \end{equation*}
+
+    \tikz[overlay] {
+        \node (arrow_1_start) at (-3, 0.7) {\Large{D}};
+        \node (arrow_1_end) at (-1.5, 0.7) {};
+
+        \node (arrow_2_start) at (0.6,3) {\Large{D}};
+        \node (arrow_2_end) at (0.6,1.5) {};
+
+        \draw[->, very thick, red] (arrow_1_start) -- (arrow_1_end);
+        \draw[->, very thick, red] (arrow_2_start) -- (arrow_2_end);
+        }
+\end{frame}
+
+
+% Slide 5
+\begin{frame}
+    \frametitle{Pareto Optimality}
+    
+    \centering
+    \begin{equation*}
+        \begin{bmatrix}
+            (3,3) & (0,5) \\
+            (5,0) & (1,1)
+        \end{bmatrix}
+    \end{equation*}
+
+    \vspace{-0.5cm}
+    \begin{equation*}
+        \overbrace{(3,3), \, (0,5), \, (5,0), \, (1,1)}
+    \end{equation*}
+\end{frame}
+
+
+% Slide 6
+\begin{frame}
+    \frametitle{Pareto Optimality}
+    
+    \centering
+    \begin{equation*}
+        \begin{bmatrix}
+            (3,3) & (0,5) \\
+            (5,0) & (1,1)
+        \end{bmatrix}
+    \end{equation*}
+
+    \vspace{-0.5cm}
+    \begin{equation*}
+        \overbrace{(3,3), \, (0,5), \, (5,0), \, (1,1)}
+    \end{equation*}
+
+    \begin{equation*}
+        (\underline{3},\underline{3}) > (1,1)
+    \end{equation*}
+\end{frame}
