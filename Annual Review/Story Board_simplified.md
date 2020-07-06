@@ -5,6 +5,7 @@
 ### **2.1. Motivation - The problem**
 - Ambulance service and ED interaction
 - Game Theoretic scenario informed by queueing theoretic models
+- Model to be output at the end - going to come back to this
 
 - Set of regulations: 95% of patients within 4 hours
 - Causes ambulances blockage in an attempt to satisfy regulations
@@ -21,7 +22,7 @@
 
 
 ### **2.2. Simulation - Markov Chain**
-- Build queueing theory model to get utilities of game theoretic model 
+- Queueing theory model to get utilities of game theoretic model 
 - Illustrate examples of the two models that were used
 - DES model - Markov chain model (DESCRIBE)
 - Parameters
@@ -32,11 +33,12 @@
 
 ### **2.3. Outputs**
 - Getting performance measures we need $\pi$
-- Solving the following equations where ...
+- Solving the following equations
 
 - Heatmap of state probabilities for larger such model
 - System is mostly in states (0,2) - (0,5)
 
+- From these state probabilities
 - Mean Waiting time of either ambulance or other patients
 - Overall Waiting Time
 
@@ -59,3 +61,4 @@
 - Objectives:
     - Hospitals: Satisfy waiting time targets
     - Ambulance: Efficiently distribute patients 
+- Find realistic input parameters
