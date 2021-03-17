@@ -275,5 +275,5 @@ make_violinplots_of_fictitious_play(
     seed_reps=100,
     num_of_violiplots=10,
 )
-plt.savefig("main.pdf", transparent=True)
+plt.savefig("../fictitious_play.pdf", transparent=True)
 plt.close()
