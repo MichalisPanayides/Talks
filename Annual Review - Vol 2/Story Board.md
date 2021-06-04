@@ -3,28 +3,30 @@
 ## 1. Motivation
 
 ## 2. Description of model (DES & Markov)
-1. DES overview
+1. DES overview (Jupyter notebook demonstration)
 2. Markov model overview
 3. Animation to show how they model the same thing
 
 ## 3. Performance Measures of models
-1. Waiting time formula - Comparison
-2. Blocking time formula - Comparison
-3. Proportion within time - Comparison  
+1. Generator matrix and steady state vector (Jupyter notebook demonstration)
+2. Waiting time formula - Comparison (Jupyter notebook demonstration)
+3. Blocking time formula - Comparison (Jupyter notebook demonstration)
+4. Proportion within time - Comparison (Jupyter notebook demonstration)
 
 ## 4. Game
-1. General formulation
-2. Hospitals
-3. Ambulance
+1. Players 
+2. Strategies (Jupyter notebook demonstration)
 
 ## 5. Playing the game
-1. Jupiter notebook of code??
-2. 
+1. Jupiter notebook - playing the game
 
 ## 6. Penalised Game
-
+1. Plot of penalising the game to improve blocking time PoA
 
 ## 7. Future plans
+1. Paper(s)
+2. PyCon Talk
+3. EURO Talk
 
 
 
