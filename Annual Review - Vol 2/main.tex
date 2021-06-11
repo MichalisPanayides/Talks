@@ -1,0 +1,33 @@
+\documentclass{beamer}
+
+% Solarized Theme
+\usecolortheme[light, accent=orange]{solarized}
+\beamertemplatenavigationsymbolsempty
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\usetikzlibrary{positioning, math, automata}
+\usepackage{amsmath}
+\usepackage{blkarray}
+\usepackage{graphicx}
+
+\title{\Large{Annual Review}}
+\author{Michalis Panayides}
+\date{2021-06-11}
+
+\begin{document}
+
+    \frame{\titlepage}
+    \input{Frames/1. Motivation/main.tex}
+    \input{Frames/2. Queueing model/main.tex}
+    \input{Frames/3. Performance Measures/main.tex}
+    \input{Frames/4. Game/main.tex}
+    \input{Frames/5. Penalised Game/main.tex}
+    \input{Frames/6. Future/main.tex}
+
+\end{document}
