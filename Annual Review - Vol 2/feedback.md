@@ -1,0 +1,15 @@
+# Michalis Annual Review
+- Very nice start to your talk Michalis.
+- A “great thing” -> not necessarily.
+- Not everyone would know what an arrival rate is.
+- Your explanation of T could be a bit clearer: “It is how full the system needs to be for the Hospital to start keeping patients in their ambulances”.
+- Who are the lambda ones in practice?
+- I think your Markov chain diagram could have a line across it to show the $T$.
+- At some point I think you should highlight that the queuing model is written in a completely generic way
+- Your histograms should include a plot of the mean for the simulation (to show that they match)
+- “A strategy that corresponds to one of each Markov chains” was a really nice way of putting it. You could possibly have that as a diagram.
+- Your ambulance choice heatmap needed the probability (what you were plotting)) labelled.
+- Your game should have the utilities rounded (for the purpose of the presentation),
+- Your microphone acts weird, i think it’s very targeted so if/when you move your sound changes a lot.
+- I think more details about the asymmetric replicator dynamics would have been helpful. Describing what you mean by a learning algorithm, versus a NE etc…
+- Better introduction to PoA (possibly even with a discussion of the literature - Paul and my paper, also Komenda et al paper).
