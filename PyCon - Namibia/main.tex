@@ -1,0 +1,41 @@
+\documentclass{beamer}
+
+% Solarized Theme
+\usecolortheme[light, accent=orange]{solarized}
+\beamertemplatenavigationsymbolsempty
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\usetikzlibrary{positioning, math, automata}
+\usepackage{amsmath}
+\usepackage{blkarray}
+\usepackage{graphicx}
+\usepackage{fontawesome}
+
+\title{\Large{Using Python to measure the expected wait in a queue with two waiting rooms}}
+\author{\textbf{Michalis Panayides}}
+\date{}
+
+\begin{document}
+
+    \frame{
+        \titlepage
+        \centering
+        \vspace{-2cm}
+        \textbf{PyCon Namibia 18-19 June 2021}
+    }
+    \setbeamertemplate{frametitle}[default][center]
+
+    \input{Frames/1. Me/main.tex}
+    \input{Frames/2. Queues/main.tex}
+    \input{Frames/3. Simulation/main.tex}
+    \input{Frames/4. Analytical/main.tex}
+    \input{Frames/5. Comparisons/main.tex}
+    \input{Frames/6. Discussion/main.tex}
+    
+\end{document}
