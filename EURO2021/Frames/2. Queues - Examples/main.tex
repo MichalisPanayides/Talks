@@ -1,0 +1,48 @@
+\begin{frame}
+    \frametitle{Queues}
+    \centering
+
+    \tikzset{man/.pic={
+        \node[circle, fill, minimum size=5mm] (head) {};
+        \node[rounded corners = 2pt, minimum height = 0.8cm, minimum width=0.4cm,
+            fill, below = 1pt of head] (body) {};
+        \draw[line width = 1mm, round cap-round cap] 
+            ([shift={(2pt,-1pt)}]body.north east) --++ (-90:6mm);
+        \draw[line width=1mm,round cap-round cap] 
+            ([shift={(-2pt,-1pt)}]body.north west) --++ (-90:6mm);
+        \draw[line width = 2mm, round cap-round cap] 
+            ([shift={(-3.3pt,3.7pt)}]body.south east) --++ (-83:6mm);
+       \draw[line width = 2mm, round cap-round cap] 
+            ([shift={(3.3pt,3.7pt)}]body.south west) --++ (-97:6mm);
+    }}
+
+
+    \only<1>{
+        \scalebox{0.8}{
+            \begin{tikzpicture} 
+                \foreach \j in {1,...,5}
+                    \pic[orange] at (\j*1.5 - 1, 0) {man};
+                \pic[orange] at (9, 0) {man};
+                \draw[fill = orange] (8, -0.5) rectangle (10, -1.6);
+            \end{tikzpicture}
+        }
+    }
+
+    \only<2>{
+        \scalebox{0.8}{
+            \begin{tikzpicture}
+                \foreach \i in {1,...,5}
+                \pic[cyan] at (\i*1.5 - 1, 0) {man};
+                
+                \foreach \j in {2, -0.5, -3}{
+                    \pic[cyan] at (9, \j + 0.5) {man};
+                    \draw[fill = cyan] (8, \j) rectangle (10, \j -1.1);
+                }
+            \end{tikzpicture}
+        }
+    }
+
+    \only<3>{
+        \includegraphics[scale=0.45]{Bin/ambulance_queue.jpg}
+    }
+\end{frame}

@@ -7,6 +7,11 @@
 - THIS (The Healthcare Improvement Studies) Institute (logo)
 - PhD research
 
+
+## Queues examples
+- M|M|1
+- M|M|3
+- Custom Queue
 ___
 ___
 ### Queues using DES
