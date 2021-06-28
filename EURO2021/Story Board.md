@@ -12,33 +12,23 @@
 - M|M|1
 - M|M|3
 - Custom Queue
-___
-___
+
 ### Queues using DES
 - M|M|1 queue
-- M|M|c queue
+- M|M|3 queue
 - Custom queue
 
 ### Queues using Markov chain
 - M|M|1 queue
-- M|M|c queue
+- M|M|3 queue
+- Network of queues
 - Custom queue
 
-___
-### Queues
-- M|M|1 queue - DES
-- M|M|1 queue - Markov Chain
-- M|M|c queue - DES
-- M|M|c queue - Markov Chain
-- Custom queue - DES
-- Custom queue - Markov Chain
-___
-___
 
 ## Transition Matrix and steady state probabilities
-- M|M|1 queue
-- M|M|c queue
+- M|M|3 queue
 - Custom queue
+- Comparison of states using simulation and Markov model
 
 
 ## Performance Measures for custom queue
