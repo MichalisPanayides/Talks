@@ -13,12 +13,12 @@
 - M|M|3
 - Custom Queue
 
-### Queues using DES
+## Queues using DES
 - M|M|1 queue
 - M|M|3 queue
 - Custom queue
 
-### Queues using Markov chain
+## Queues using Markov chain
 - M|M|1 queue
 - M|M|3 queue
 - Network of queues
