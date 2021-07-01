@@ -156,6 +156,39 @@
     \frametitle{Game - Formulation}
     \centering
 
+    \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[-, node distance = 3cm, scale=0.6]
+
+            \draw[thick] (-0.4, -2.7) -- (-0.4, 2.2) -- (7.68, 2.2) -- (7.68, -2.7) -- (-0.4, -2.7);
+            \node[anchor=north](HA){\scriptsize{\(H_A\)}};
+            \node[anchor=north](HA_d1) at (3, 2){.};
+            \node[anchor=north](HA_d2) at (3, -2){.};
+        
+            \path[->] (HA) edge node {}(HA_d1);
+            \path[->] (HA) edge node {}(HA_d2);
+            \path (HA_d1) edge [bend left] node {}(HA_d2);
+            \path (HA_d1) [dashed] edge node {}(HA_d2);
+        
+            \node[anchor=north](HB) at (4.1, 0){\scriptsize{\(H_B\)}};
+            \node[anchor=north](HB_d1) at (6.9, 2){.};
+            \node[anchor=north](HB_d2) at (6.9, -2){.};
+        
+            \path[->] (HB) edge node {}(HB_d1);
+            \path[->] (HB) edge node {}(HB_d2);
+            \path(HB_d1) edge [bend left] node {}(HB_d2);
+        
+            \node[anchor=north](D) at (7.9, 0){\scriptsize{\(D\)}};
+            \node[anchor=north](D_d1) at (10.8, 2){.};
+            \node[anchor=north](D_d2) at (10.8, -2){.};
+            
+            \path[->] (D) edge node {}(D_d1);
+            \path[->] (D) edge node {}(D_d2);
+            \path(D_d1) edge [bend left] node {}(D_d2);
+        \end{tikzpicture}
+    \end{figure}
+    
+
     \scriptsize
     \begin{equation*}
         A = 
