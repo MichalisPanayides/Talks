@@ -56,7 +56,7 @@ diff_states_probabilities_array = (
 )
 
 plt.figure(figsize=(6, 4))
-plt.imshow(sim_state_probabilities_array, cmap="cividis")
+plt.imshow(sim_state_probabilities_array, cmap="Blues")
 for i in range(sim_state_probabilities_array.shape[0]):
     for j in range(sim_state_probabilities_array.shape[1]):
         if not np.isnan(sim_state_probabilities_array[i, j]):
@@ -66,10 +66,11 @@ for i in range(sim_state_probabilities_array.shape[0]):
                 "{:.2f}".format(sim_state_probabilities_array[i, j]),
                 ha="center",
                 va="center",
-                color="firebrick",
-                fontsize=14,
+                color="chocolate",
+                fontsize=15,
             )
 plt.title("Simulation", fontsize=11, fontweight="bold")
+plt.yticks([0, 1, 2])
 plt.xlabel("Queue 2", fontsize=11, fontweight="bold")
 plt.ylabel("Queue 1", fontsize=11, fontweight="bold")
 plt.colorbar()
@@ -77,7 +78,7 @@ plt.savefig("simulation.png", transparent=True)
 
 
 plt.figure(figsize=(6, 4))
-plt.imshow(markov_state_probabilities_array, cmap="cividis")
+plt.imshow(markov_state_probabilities_array, cmap="Blues")
 for i in range(markov_state_probabilities_array.shape[0]):
     for j in range(markov_state_probabilities_array.shape[1]):
         if not np.isnan(markov_state_probabilities_array[i, j]):
@@ -87,10 +88,11 @@ for i in range(markov_state_probabilities_array.shape[0]):
                 "{:.2f}".format(markov_state_probabilities_array[i, j]),
                 ha="center",
                 va="center",
-                color="firebrick",
-                fontsize=14,
+                color="chocolate",
+                fontsize=15,
             )
 plt.title("Markov chain", fontsize=11, fontweight="bold")
+plt.yticks([0, 1, 2])
 plt.xlabel("Queue 2", fontsize=11, fontweight="bold")
 plt.ylabel("Queue 1", fontsize=11, fontweight="bold")
 plt.colorbar()
@@ -98,20 +100,21 @@ plt.savefig("markov.png", transparent=True)
 
 
 plt.figure(figsize=(6, 4))
-plt.imshow(diff_states_probabilities_array, cmap="viridis")
+plt.imshow(diff_states_probabilities_array, cmap="Blues")
 for i in range(diff_states_probabilities_array.shape[0]):
     for j in range(diff_states_probabilities_array.shape[1]):
         if not np.isnan(diff_states_probabilities_array[i, j]):
             plt.text(
                 j,
                 i,
-                "{:.1e}".format(diff_states_probabilities_array[i, j]),
+                "{:.0e}".format(diff_states_probabilities_array[i, j]),
                 ha="center",
                 va="center",
-                color="firebrick",
-                fontsize=11,
+                color="chocolate",
+                fontsize=14,
             )
 plt.title("Differences", fontsize=11, fontweight="bold")
+plt.yticks([0, 1, 2])
 plt.xlabel("Queue 2", fontsize=11, fontweight="bold")
 plt.ylabel("Queue 1", fontsize=11, fontweight="bold")
 plt.colorbar()
