@@ -1,24 +1,12 @@
 \begin{frame}
-    \frametitle{Game - Definition}
-
-    \includegraphics[scale=0.45]{Bin/ambulance_queue.jpg}
-
-    \pause
-    \footnotesize
-    \begin{itemize}
-        \item Misra S, Sarkar S. Priority-based time-slot allocation in wireless body area networks during medical emergency situations: An evolutionary game-theoretic perspective
-        \item Song J, Wen J. A non-cooperative game with incomplete information to improve patient hospital choice
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Game - Players}
+    \frametitle{Game - Players and objectives}
 
     \begin{minipage}{.35\textwidth}
         \begin{figure}
             \begin{tikzpicture}
                 \draw[ultra thick] (0.75,2) ellipse (0.8cm and 2.5cm);
-                % \draw (0,0) -- ++(1.5cm,0) -- ++(0,4cm) -- ++(-1.5cm,0) -- ++ (0, -4cm);
+                \node[blue] at (0.7, 5) {};
+                \node[blue] at (0.7, 5) {\( B \)};
                 \draw[-] (0.5, 2) -- ++(-1, 0) node[left] {\(\lambda_2\)};
                 
                 % p_A line
@@ -40,6 +28,10 @@
     \end{minipage}
     \begin{minipage}{.6\textwidth}
         \begin{figure}
+            \begin{tikzpicture}
+                \node[blue] at (0, 0) {};
+                \node[blue] at (0, 0) {\( P(W < t) \)};
+            \end{tikzpicture}
             \scalebox{.8}{
                 \begin{tikzpicture}[>=stealth, scale=0.6]
                     % the rectangle with vertical rules (Queue 1)
@@ -53,10 +45,10 @@
                     \draw (7cm-\i*10pt,1.25) -- +(0,-1.5cm);
     
                     % The two vertical lines at the very start of Queue 2 
-                    \draw (7cm-54pt,1.2) -- +(0,-0.5cm);
-                    \draw (7cm-54pt,0.3) -- +(0,-0.5cm);        
-                    \draw (7cm-51pt,1.1) -- +(0,-0.4cm);
-                    \draw (7cm-51pt,0.3) -- +(0,-0.4cm);
+                    \draw (7cm-54pt, 1.2) -- +(0, -0.5cm);
+                    \draw (7cm-54pt, 0.3) -- +(0, -0.5cm);        
+                    \draw (7cm-51pt, 1.1) -- +(0, -0.4cm);
+                    \draw (7cm-51pt, 0.3) -- +(0, -0.4cm);
             
                     % The label between the lines for T
                     \node[anchor=north] at (5.2, 0.84) {\tiny{\( T_A \)}};
@@ -122,9 +114,7 @@
                 \end{tikzpicture}
             }
         \end{figure}
-
     \end{minipage}
-        
 \end{frame}
 
 
@@ -188,34 +178,4 @@
             \path(D_d1) edge [bend left] node {}(D_d2);
         \end{tikzpicture}
     \end{figure}
-    
-
-    \scriptsize
-    \begin{equation*}
-        A = 
-        \begin{pmatrix}
-            U_{1,1}^A & U_{1,2}^A & \dots & U_{1,N_B}^A \\ 
-            U_{2,1}^A & U_{2,2}^A & \dots & U_{2,N_B}^A \\
-            \vdots & \vdots & \ddots & \vdots \\
-            U_{N_A,1}^A & U_{N_A,2}^A & \dots & U_{N_A,N_B}^A \\
-        \end{pmatrix}, \quad
-        B = 
-        \begin{pmatrix}
-            U_{1,1}^B & U_{1,2}^B & \dots & U_{1,N_B}^B \\ 
-            U_{2,1}^B & U_{2,2}^B & \dots & U_{2,N_B}^B \\
-            \vdots & \vdots & \ddots & \vdots \\
-            U_{N_A,1}^B & U_{N_A,2}^B & \dots & U_{N_A,N_B}^B \\
-        \end{pmatrix}
-    \end{equation*}
-
-    \begin{equation*}
-        R = 
-        \begin{pmatrix}
-            p_{1,1} & p_{1,2} & \dots & p_{1,N_B} \\ 
-            p_{2,1} & p_{2,2} & \dots & p_{2,N_B} \\
-            \vdots & \vdots & \ddots & \vdots \\
-            p_{N_A,1} & p_{N_A,2} & \dots & p_{N_A,N_B} \\
-        \end{pmatrix}
-    \end{equation*}
-
 \end{frame}
