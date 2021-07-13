@@ -196,19 +196,19 @@
     
     \small
     \begin{equation*}
-        P(X < t) = \frac{\lambda_1 P_{L'_1}}{\lambda_2 P_{L'_2}+\lambda_1 P_{L'_1}} 
-        P(X^{(1)} < t) + \frac{\lambda_2 P_{L'_2}}{\lambda_2 P_{L'_2} + 
-        \lambda_1 P_{L'_1}}P(X^{(2)} < t) 
+        P(W < t) = \frac{\lambda_1 P_{L'_1}}{\lambda_2 P_{L'_2}+\lambda_1 P_{L'_1}} 
+        P(W^{(1)} < t) + \frac{\lambda_2 P_{L'_2}}{\lambda_2 P_{L'_2} + 
+        \lambda_1 P_{L'_1}}P(W^{(2)} < t) 
     \end{equation*}
 
     \begin{equation*}
-        P(X^{(1)} < t) = \frac{\sum_{(u,v) \in S_A^{(1)}} P(X_{(u,v)}^{(1)} < t) 
+        P(W^{(1)} < t) = \frac{\sum_{(u,v) \in S_A^{(1)}} P(W_{(u,v)}^{(1)} < t) 
         \pi_{u,v} }{\sum_{(u,v) \in S_A^{(1)}} \pi_{u,v}}
     \end{equation*}
     
     
     \begin{equation*}
-        P(X^{(2)} < t) = \frac{\sum_{(u,v) \in S_A^{(2)}} P(X_{(u,v)}^{(2)} < t) 
+        P(W^{(2)} < t) = \frac{\sum_{(u,v) \in S_A^{(2)}} P(W_{(u,v)}^{(2)} < t) 
         \pi_{u,v} }{\sum_{(u,v) \in S_A^{(2)}} \pi_{u,v}}
     \end{equation*}
     
@@ -220,7 +220,7 @@
 
     \scriptsize
     \begin{equation*}
-        P(X^{(i)} < t) = \frac{\sum_{(u,v) \in S_A^{(i)}} P(X_{u,v}^{(i)} < t) 
+        P(W^{(i)} < t) = \frac{\sum_{(u,v) \in S_A^{(i)}} P(W_{u,v}^{(i)} < t) 
         \pi_{u,v} }{\sum_{(u,v) \in S_A^{(i)}} \pi_{u,v}}, \quad \textbf{for } i = \{1, 2\}
     \end{equation*}
 
@@ -233,7 +233,7 @@
         \tiny
         \vspace{0.9cm}
         \begin{equation*}
-            P(X_{(u,v)}^{(1)} < t) = 
+            P(W_{(u,v)}^{(1)} < t) = 
             \begin{cases}
                 1 - \sum_{i=0}^{v-1} \frac{1}{i!} e^{-\mu t} (\mu t)^i, 
                 & \textbf{if } C = 1 \textbf{ and } v>1 \\
@@ -249,11 +249,11 @@
         \end{equation*}
         \vspace{0.9cm}
         \begin{equation*}
-            P(X_{(u,v)}^{(2)} < t) = 
+            P(W_{(u,v)}^{(2)} < t) = 
             \begin{cases}
                 1 - \sum_{i=0}^{\min(v,T)-1} \frac{1}{i!} e^{-\mu t} (\mu t)^i,  
                 & \textbf{if } C = 1 \textbf{ and } v, T > 1 \\
-                1 - \mu (\mu C) ^ {\min(v,T) - C} \times 
+                1 - \mu (\mu C) ^ {\min(v,T) - C} 
                     \sum_{k=1}^{\mid \vec{r} \mid} \sum_{l=1}^{r_k} 
                     \frac{\Psi_{k,l}(-\lambda_k)t^{r_k - l} 
                     e^{-\lambda_k t}}{(r_k - l)! (l - 1)!}, 
@@ -270,7 +270,7 @@
     \only<2>{
         \vspace{1cm}
         \begin{equation*}
-            X_{(u,v)}^{(1)} \sim 
+            W_{(u,v)}^{(1)} \sim 
             \begin{cases}
                 \textbf{Erlang}(v, \mu), & \textbf{if } C = 1 \textbf{ and } v>1 \\
                 \textbf{Hypo} \left(
@@ -281,7 +281,7 @@
         \end{equation*}
         \vspace{1cm}
         \begin{equation*}
-            X_{(u,v)}^{(2)} \sim 
+            W_{(u,v)}^{(2)} \sim 
             \begin{cases}
                 \textbf{Erlang}(\min(v, T), \mu), & \textbf{if } C = 1
                     \textbf{ and } v, T > 1 \\
@@ -291,7 +291,7 @@
                 \textbf{Erlang}(1, \mu), & \textbf{if } v \leq C \textbf{ or } T \leq C
             \end{cases}
         \end{equation*}
-        \vspace{1.1cm}
+        \vspace{1cm}
     }
     
 
