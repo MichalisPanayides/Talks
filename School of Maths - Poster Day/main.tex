@@ -1,0 +1,69 @@
+\documentclass[25pt, a0paper, portrait]{tikzposter}
+
+\title{The Ambulance Decision Game}
+\author{Michalis Panayides}
+\date{\today}
+\institute{Cardiff University}
+\usetheme{Envelope}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{comment}
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\usetikzlibrary{positioning, math, automata}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{columns}
+    
+    \column{0.45}
+    \input{Blocks/1. Ambulance blockage/main.tex}
+
+    \column{0.55}
+    \input{Blocks/2. Imperfect info game/main.tex}
+\end{columns}
+
+\begin{columns}
+    \column{0.6}
+    \input{Blocks/3. Queue diagram/main.tex}
+    
+    \column{0.4}
+    \input{Blocks/4. Markov chain/main.tex}
+\end{columns}
+
+\begin{columns}
+    \column{0.6}
+    \input{Blocks/5. Strategies/main.tex}
+    
+    \column{0.4}
+    \input{Blocks/6. Ambulance decision/main.tex}
+\end{columns}
+
+\begin{columns}
+    \column{0.4}
+    \input{Blocks/7. Learning algorithm/main.tex}
+
+    \column{0.2}
+    \block{}{
+        \centering
+        \huge{Inefficiencies can be learned and emerge naturally \\ \( \longleftarrow\)}
+    }
+    \block{}{
+        \centering
+        \huge{
+            \(\longrightarrow\) \\
+            Targeted incentivisation of behaviours can help escape inefficiencies}
+    }
+
+    \column{0.4}
+    \input{Blocks/8. Learning algorithm incentives/main.tex}
+\end{columns}
+
+
+\end{document}
