@@ -77,13 +77,13 @@
 
 
 
-# Practical Steps (Name - pgr_lib)
+# Practical Steps (Name - `pgr_lib`)
 ## Before talk
 - Delete `pgr_lib` folder, GitHub repo and PyPI package
 - Need to have `.pypirc`, `src code`, `test code`, `.pypirc`, `tox.ini`
 - `Windows Terminal` -> `Run As Administrator`
 - Activate `conda` environment -> `pgr_env`
-- VScode -> Large fonts
+- `VScode` -> Large fonts
 
 ## How to make a package
 - Initialise `git` repository
