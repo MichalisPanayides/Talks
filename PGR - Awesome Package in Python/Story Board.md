@@ -23,10 +23,13 @@
 - Practical steps
 
 ## Python
+- `Python`
+  - Open source programming language
+  - Friendly and powerful
 - Packages
-- how to install a package
-  - `pip` - built into python
-- `PYPI` - `testPyPI`
+- `pip`: how to install a package
+  - python installer for python 
+  - usage example: `python -m pip install numpy`
 
 
 ## Rock-Paper-Scissors
@@ -39,7 +42,8 @@
 - Less thought about packaging
 - Helps avoid common mistakes
 - *Make the easy things easy and the hard things possible* 
-
+- Publish a package to:
+  - `PYPI` - `testPyPI`
 
 ## README.md and CHANGELOG.md
 - `README.md`
