@@ -56,7 +56,7 @@
 - `pytest`
 
 
-## Other software
+## Linters
 - `black`: PEP8 convention code formatter
 - `flake8`: Style Guide Enforcement tool (collection of other tools)
 - `mypy`: Static type checker (using annotations)
