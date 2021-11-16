@@ -21,23 +21,43 @@
     
     \vspace{1cm}
 
-    Linting tools:
+    Linting and other tools:
     
     \begin{multicols}{3}
         \begin{itemize}
             \item black
             \item pylint
-            \item tox
             \item flake8
             \item mccabe
             \item mypy
+            \item coverage
         \end{itemize}
     \end{multicols}
 \end{frame}
 
 
 \begin{frame}
-    \frametitle{GitHub Actions}
+    \centering
+    
+    \color{blue}
+
+    \textit{flake8} \\
+    \vspace{0.3cm}
+    \textit{pylint} \qquad \qquad \textit{mccabe} \\
+    \vspace{0.2cm}
+
+    \vspace{0.8cm}
+    \textit{black} \qquad \qquad {\Huge \href{https://tox.wiki/en/latest/index.html}{\textcolor{red}{Tox}}} \qquad \qquad \textit{mypy}
+
+    \vspace{0.8cm}
+    \textit{pytest} \qquad \qquad \textit{coverage}
+
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{\href{https://github.com/11michalis11/AmbulanceDecisionGame/blob/master/.github/workflows/config.yml}{GitHub Actions}}
     \centering
 
     \includegraphics[width=\textwidth]{Bin/github_actions.png}
