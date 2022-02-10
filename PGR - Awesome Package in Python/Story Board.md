@@ -6,55 +6,50 @@
 - THIS Institute
 
 ## How to build an awesome python package
-- **Motivation**: Make this `pip-installable`
-- Talk based on: https://antonz.org/python-packaging/
-- Not only how to make a package, but how to make an awesome package
-- `AWESOME`: `automation`, `documentation`, `testing`, `packaging` and more
-- There are a lot of concepts in this talk that could be a talk by itself
-- `VScode`, `Command line`, `Python`, `Packaging`, `Git`, `GitHub`
-- Basic Usage of the `Command line`
+- Not talking how to write python code
+- **Motivation**: Make this `pip-installable` -> Anton's blog post
+- Awesome package
 
+## Git
+- Multiple versions of a files
+- Popular version control tool
+- Describe
+- Time and Space
+- Initialise git repository
 
-## Git and GitHub
-- Version control
-- Time and Space: `https://ljvmiranda921.github.io/notebook/2021/06/05/avengers-git/`
-- `Change`, `Add`, `Commit`, `Push` 
-- Cool git-GitHub slide here
-- Practical steps
+# GitHub
+- GitHub: Cloud based service - store and manage files
+- Describe: `Change`, `Add`, `Commit`, `Push`, `Pull`
+- For every change on the timeline update GitHub 
+- Visualise git and GitHub
+- Create GitHub repo
 
 ## Python
 - `Python`
   - Open source programming language
-  - Friendly and powerful
-- Packages
+  - User friendly and powerful
+- Packages: Pandas - Data Analysis, Matplotlib - Plotting
 - `pip`: how to install a package
-  - python installer for python 
+  - python installer for python
   - usage example: `python -m pip install numpy`
 
-
-## Rock-Paper-Scissors
-- How the game is played
-- Structure of the code
-
-
 ## `Flit`
-- Simple way to put Python packages on PyPI.
 - Less thought about packaging
 - Helps avoid common mistakes
 - *Make the easy things easy and the hard things possible* 
+- Simple way to put Python packages on PyPI.
 - Publish a package to:
   - `PYPI` - `testPyPI`
 
 ## README.md and CHANGELOG.md
 - `README.md`
 - `CHANGELOG.md`
-
+- `Docstrings`
 
 ## Testing
 - Test driven development
 - Write test - Write code - Fix test
 - `pytest`
-
 
 ## Linters
 - `black`: PEP8 convention code formatter
@@ -65,13 +60,10 @@
   - helps enforcing a coding standard 
   - sniffs for code smells
   - offers simple refactoring suggestions
-- Examples of all these tools
-
 
 ## `Tox`
-- Brings everything together
 - Task automation tool
-
+- Brings everything together
 
 ## GitHub Actions
 - Easy to automate tasks
