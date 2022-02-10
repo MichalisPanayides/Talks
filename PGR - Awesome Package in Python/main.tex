@@ -1,0 +1,39 @@
+\documentclass{beamer}
+
+% Solarized Theme
+\usecolortheme[light, accent=orange]{solarized}
+\beamertemplatenavigationsymbolsempty
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fontawesome}
+\usepackage{xcolor}
+
+\title{\Large{How to make an awesome package in python}}
+\author{\textbf{Michalis Panayides}}
+\date{}
+
+\begin{document}
+
+    \frame{
+        \titlepage
+        \centering
+        \vspace{-2cm}
+        \textbf{PGR-Talks}
+    }
+    \setbeamertemplate{frametitle}[default][center]
+
+    \input{Frames/1. Me.tex}
+    \input{Frames/2. Tools overview.tex}
+    \input{Frames/3. Git.tex}
+    \input{Frames/4. Python.tex}
+    \input{Frames/5. Documentation.tex}
+    \input{Frames/6. Testing - Linters.tex}
+    \input{Frames/7. Final.tex}
+
+\end{document}

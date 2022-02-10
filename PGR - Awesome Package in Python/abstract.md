@@ -1,0 +1,3 @@
+# How to make an awesome package in python
+
+This talk will give a brief overview of how to make an awesome package in python, starting with how to create a basic package and how to make it publicly available and then extending it to make it awesome. Making a package awesome basically refers to adding documentation, tests and automation to the package. These are powerful concepts that can be extended to projects beyond python.
