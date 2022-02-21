@@ -14,14 +14,6 @@ The state probabilities of the Markov chain system have been used to extract the
 performance measures of the queueing model (e.g. mean time in each waiting room,
 mean number of individuals in each room, etc.).
 
-A 3-player game theoretic model is proposed between two such queueing systems
-and a service that distributes individuals to them.
-In particular this can be seen as a 2-player normal-form game where the
-utilities are determined by a third player with its own strategies and
-objectives.
-A backwards induction technique is used to get the utilities of the normal-form
-game between the two queueing systems.
-
 This particular system can be applied in a healthcare scenario where it captures
 the emergent behaviour between the Emergency Medical Service (EMS) and the
 Emergency Department (ED).
