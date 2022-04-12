@@ -2,10 +2,13 @@
 
 
 ## 1. Intro
-
+- About me
 
 ## 2. Queues examples
-
+- Queues (possibly speak about Kendall notation)
+- M/M/1
+- M/M/3
+- My custom network (Structure, parameters)
 
 ## 3. Queues using DES
 

@@ -1,102 +1,99 @@
 \begin{frame}
     \centering
-
-    \tikzset{man/.pic={
-        \node[circle, fill, minimum size=5mm] (head) {};
-        \node[rounded corners = 2pt, minimum height = 0.8cm, minimum width=0.4cm,
-            fill, below = 1pt of head] (body) {};
-        \draw[line width = 1mm, round cap-round cap] 
-            ([shift={(2pt,-1pt)}]body.north east) --++ (-90:6mm);
-        \draw[line width=1mm,round cap-round cap] 
-            ([shift={(-2pt,-1pt)}]body.north west) --++ (-90:6mm);
-        \draw[line width = 2mm, round cap-round cap] 
-            ([shift={(-3.3pt,3.7pt)}]body.south east) --++ (-83:6mm);
-       \draw[line width = 2mm, round cap-round cap] 
-            ([shift={(3.3pt,3.7pt)}]body.south west) --++ (-97:6mm);
-    }}
+    \frametitle{Queues - M/M/1}
+    \begin{tikzpicture}
+        \draw[->] (-0.7,-0.75) node[left] {\(\lambda\)} -- (1,-0.75);
+        \draw (1,0) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+        \foreach \i in {1,...,5}
+            \draw (3cm-\i*10pt,0) -- +(0,-1.5cm);
+        \draw (3.75, -0.75) circle [radius=0.75cm];
+        \node at (3.75, -0.75) {\(\mu\)};
+        \draw[->] (4.5, -0.75) -- (5.8, -0.75);
+    \end{tikzpicture}
+\end{frame}
 
 
-    \only<1>{
-        \frametitle{Queues - M/M/1}
+\begin{frame}
+    \centering
+    \frametitle{Queues - M/M/3}
+    \begin{tikzpicture}
+        \draw[->] (-0.7,-0.75) node[left] {\(\lambda\)} -- (1,-0.75);
+        \draw (1,0) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+        \foreach \i in {1,...,5}
+            \draw (3cm-\i*10pt,0) -- +(0,-1.5cm);
+        \draw (3.75, 0.75) circle [radius=0.75cm];
+        \draw (3.75, -0.75) circle [radius=0.75cm];
+        \draw (3.75, -2.25) circle [radius=0.75cm];
+        \node at (3.75, 0.75) {\(\mu\)};
+        \node at (3.75, -0.75) {\(\mu\)};
+        \node at (3.75, -2.25) {\(\mu\)};
+        \draw[->] (4.5, -0.75) -- (5.8, -0.75);
+    \end{tikzpicture}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{Queues - Custom network of queues}
+    \centering
+
+    \includegraphics[scale=0.45]{Bin/ambulance_queue.jpg}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Queues - Custom network of queues}
+    \begin{figure}[h]
         \centering
+        \begin{tikzpicture}[>=stealth, scale=0.7] %arrow type
+            % Queue 1
+            \draw (1,0) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+            \foreach \i in {1,...,4}
+            \draw (3cm-\i*10pt,0) -- +(0,-1.5cm);
 
-        \scalebox{0.8}{
-            \begin{tikzpicture} 
-                \foreach \j in {1,...,5}
-                    \pic[orange] at (\j*1.5 - 1, 0) {man};
-                \pic[orange] at (9, 0) {man};
-                \draw[fill = orange] (8, -0.5) rectangle (10, -1.6);
-            \end{tikzpicture}
-        }
-        \vspace{4cm}
-    }
-    \only<2>{
-        \frametitle{Queues - M/M/1}
-        \centering
+            % Queue 2
+            \draw (5,1.25) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+            \foreach \i in {1,...,4}
+            \draw (7cm-\i*10pt,1.25) -- +(0,-1.5cm);
+            \draw (7.75,0.5) circle [radius=0.75cm];
 
-        \scalebox{0.8}{
-            \begin{tikzpicture} 
-                \foreach \j in {1,...,5}
-                    \pic[orange] at (\j*1.5 - 1, 0) {man};
-                \pic[orange] at (9, 0) {man};
-                \draw[fill = orange] (8, -0.5) rectangle (10, -1.6);
-            \end{tikzpicture}
-        }
-        \footnotesize
-        \vspace{1cm}
-        \begin{itemize}
-            \item Shone R, Knight VA, Williams JE. Comparisons between observable and unobservable M/M/1 queues with respect to optimal customer behaviour
-            \item Kerner Y, Shmuel-Bittner O. Strategic behaviour and optimization in a hybrid M/M/1 queue with retrials.
-            \item Gai Y, Liu H, Krishnamachari B. A packet dropping mechanism for efficient operation of M/M/1 queues with selfish users.
-        \end{itemize}
-    }
+            % The two vertical lines at the very start of Queue 2
+            \draw (7cm-54pt,1.2) -- +(0,-0.5cm);
+            \draw (7cm-54pt,0.3) -- +(0,-0.5cm);
+            \draw (7cm-51pt,1.1) -- +(0,-0.4cm);
+            \draw (7cm-51pt,0.3) -- +(0,-0.4cm);
+            \node[anchor=north] at (5.15, 0.83 cm) {\scriptsize{T}};
 
-    \only<3>{
-        \frametitle{Queues - M/M/3}
-        \centering
+            % the arrows and labels (Queue 1+2)
+            \node[align=center] at (1cm,-2cm) {};
+            \node[align=center] at (6cm,-0.75cm) {};
 
-        \scalebox{0.8}{
-            \begin{tikzpicture}
-                \foreach \i in {1,...,5}
-                \pic[cyan] at (\i*1.5 - 1, 0) {man};
-                
-                \foreach \j in {2, -0.5, -3}{
-                    \pic[cyan] at (9, \j + 0.5) {man};
-                    \draw[fill = cyan] (8, \j) rectangle (10, \j -1.1);
-                }
-            \end{tikzpicture}
-        }
-    }
+            % Arrows lines
+            \draw (4.2, 1.8) -- +(-5.2,0) node[left] {\( \lambda_1 \)};
+            \draw[<-] (1,-0.75) -- +(-2,0) node[left] {\( \lambda_2 \)};
+            \draw[->] (4.2, 0.525) -- (5, 0.525);
+            \draw[->] (8.5,0.525) -- (9.3,0.525);
 
-    \only<4>{
-        \frametitle{Queues - M/M/3}
-        \centering
-
-        \scalebox{0.8}{
-            \begin{tikzpicture}
-                \foreach \i in {1,...,5}
-                \pic[cyan] at (\i*1.5 - 1, 0) {man};
-                
-                \foreach \j in {2, -0.5, -3}{
-                    \pic[cyan] at (9, \j + 0.5) {man};
-                    \draw[fill = cyan] (8, \j) rectangle (10, \j -1.1);
-                }
-            \end{tikzpicture}
-        }
-        \footnotesize
-        \vspace{0.5cm}
-        \begin{itemize}
-            \item Knight V, Harper P. The Impact of Choice on Public Services.
-            \item Haviv M, Roughgarden T. The price of anarchy in an exponential multi-server
-            \item Shone R, Knight V, Harper P. A conservative index heuristic for routing problems with multiple heterogeneous service facilities
-        \end{itemize}
-    }
+            % Parking and Hospital Labels
+            \node[align=center] at (2.1cm,-2cm) {Parking};
+            \node[align=center] at (6.6cm,-0.75cm) {Hospital};
 
 
-    \only<5>{
-        \frametitle{Queues - Custom network of queues}
-        \centering
+            % Others lines
+            \draw[-] (3,-0.75) -- (4.2,-0.75);
+            \draw (4.2, 0.525) -- (4.2, -0.75);
+            \draw (4.2, 1.8) -- (4.2, 0.525);
 
-        \includegraphics[scale=0.45]{Bin/ambulance_queue.jpg}
-    }
+
+        \end{tikzpicture}
+    \end{figure}
+
+    Parameters:
+    \begin{itemize}
+        \item \( \lambda_1 \): Arrival rate of type 1 individuals
+        \item \( \lambda_2 \): Arrival rate of type 2 individuals
+        \item \( \mu \): Service rate
+        \item \( C \): Number of servers
+        \item \( T \): Threshold
+    \end{itemize}
 \end{frame}
