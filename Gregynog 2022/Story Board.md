@@ -8,27 +8,38 @@
 - Queues (possibly speak about Kendall notation)
 - M/M/1
 - M/M/3
+
+## 3. Markov chain formulation
 - My custom network (Structure, parameters)
+- Diagrammatic representation VS Markov chain
 
-## 3. Queues using DES
+## 4. Transition Matrix and steady state probabilities
+- Markov chain -> Generator Matrix
+- Steady state probabilities
+- How to get the steady state probabilities
 
+## 5. Performance Measures for custom queue
+- Intro to game
+- Players, Objectives
+- Performance measures overview
 
-## 4. Queues using Markov chain
+## 6. Game Theoretic model
+- Revisit game
+- Define players, strategies, objectives
+- Imperfect information extensive form game formulation
+- Payoff matrices
 
+## 7. Methodology
+- Routing matrix
+- Instance of routing matrix
+- Normal form game between hospitals
+- Example
 
-## 5. Transition Matrix and steady state probabilities
+## 8. Learning Algorithms
+- Learning Algorithms - Asymmetric Replicator Dynamics
+- Inefficiency measure - Price of Anarchy - Compartmentalised PoA
+- ARD run - outcome
+- Penalised run - outcome
 
-
-## 6. Performance Measures for custom queue
-
-
-## 7. Game Theoretic model
-
-
-## 8. Learning algorithms
-
-
-## 9. Code
-
-
-## 10. Future work
+## 10. Picture slide
+- Thank you
