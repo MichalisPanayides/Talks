@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import nashpy as nash
+import numpy as np
 
 import ambulance_game as abg
 
@@ -40,6 +41,9 @@ B += 1
 print("R = ", R)
 print("A = ", A)
 print("B = ", B)
+print("")
+print("Corrected A = \n", np.round(100000 * (A - 0.9999), 2))
+print("Corrected B = \n", np.round(100000 * (B - 0.9999), 2))
 
 game = nash.Game(A, B)
 print("N.E. = ", tuple(game.support_enumeration()))
