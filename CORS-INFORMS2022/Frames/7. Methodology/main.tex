@@ -1,47 +1,16 @@
 \begin{frame}
-    \frametitle{Ambulance's Decision}
-    \centering
+    \frametitle{Hospital's utility}
 
-    \only<1>{
-        \begin{equation*}
-            R = 
-            \begin{pmatrix}
-                p_{1,1} & p_{1,2} & \dots & p_{1,N_B} \\ 
-                p_{2,1} & p_{2,2} & \dots & p_{2,N_B} \\
-                \vdots & \vdots & \ddots & \vdots \\
-                p_{N_A,1} & p_{N_A,2} & \dots & p_{N_A,N_B} \\
-            \end{pmatrix}
-        \end{equation*}
-    }
+    \begin{equation*}
+        U_{T_A,T_B}^{(i)} = 1 - \left[ (P(X^{(i)} < t) - 0.95)^2 \right]
+    \end{equation*}
 
-    \only<2>{
-        \begin{equation*}
-            \begin{array}{c}
-                T_A = 3 \\
-                T_B = 2
-            \end{array}
-            \rightarrow  \ 
-            \begin{pmatrix}
-                - & - & - & - \\
-                - & - & - & - \\
-                - & \text{x} & - & - \\
-                - & - & - & - 
-            \end{pmatrix}
-            \rightarrow \ 
-            B_A(p_A) = B_B(1-p_A) 
-        \end{equation*}
-
-        \includegraphics[scale=0.4]{Bin/brentq_example/main.png}
-    }
 \end{frame}
 
-
 \begin{frame}
-    \frametitle{Hospitals' Decision}
-    \centering
+    \frametitle{Game - Payoff matrices}
 
     \scriptsize
-
     \begin{equation*}
         A = 
         \begin{pmatrix}
@@ -60,6 +29,13 @@
     \end{equation*}
 
     \begin{equation*}
-        U_{T_A,T_B}^{(i)} = 1 - \left[ (P(X^{(i)} < t) - 0.95)^2 \right]
+        R = 
+        \begin{pmatrix}
+            p_{1,1} & p_{1,2} & \dots & p_{1,N_B} \\ 
+            p_{2,1} & p_{2,2} & \dots & p_{2,N_B} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            p_{N_A,1} & p_{N_A,2} & \dots & p_{N_A,N_B} \\
+        \end{pmatrix}
     \end{equation*}
+
 \end{frame}

@@ -41,7 +41,7 @@
                 \node[blue] at (0, 0) {};
                 \only<2>{
                     \node[blue] at (0, 0) {Proportion of individuals
-                    within time};
+                    within target};
                 }
             \end{tikzpicture}
             \scalebox{.8}{
@@ -138,6 +138,8 @@
         b(u,v)}{\sum_{(u,v) \in S_A^{(2)}} \pi_{(u,v)}}
     \end{equation*}
 
+    \includegraphics[scale=0.5]{Bin/performance_measures_comparison/blocking_comparison.pdf}
+
 \end{frame}
 
 
@@ -186,7 +188,7 @@
 
 
 \begin{frame}
-    \frametitle{Performance Measures - Proportion within time}
+    \frametitle{Performance Measures - Proportion within target}
     \centering
     
     \small
@@ -196,99 +198,9 @@
         \lambda_1 P_{L'_1}}P(W^{(2)} < t) 
     \end{equation*}
 
-    \begin{equation*}
-        P(W^{(1)} < t) = \frac{\sum_{(u,v) \in S_A^{(1)}} P(W_{(u,v)}^{(1)} < t) 
-        \pi_{u,v} }{\sum_{(u,v) \in S_A^{(1)}} \pi_{u,v}}
-    \end{equation*}
-    
-    
-    \begin{equation*}
-        P(W^{(2)} < t) = \frac{\sum_{(u,v) \in S_A^{(2)}} P(W_{(u,v)}^{(2)} < t) 
-        \pi_{u,v} }{\sum_{(u,v) \in S_A^{(2)}} \pi_{u,v}}
-    \end{equation*}
+
+    \includegraphics[scale=0.5]{Bin/performance_measures_comparison/proportion_overall_comparison.pdf}
     
 \end{frame}
 
-
-% \begin{frame}
-%     \frametitle{Performance Measures - Proportion within time}
-
-%     \scriptsize
-%     \begin{equation*}
-%         P(W^{(i)} < t) = \frac{\sum_{(u,v) \in S_A^{(i)}} P(W_{u,v}^{(i)} < t) 
-%         \pi_{u,v} }{\sum_{(u,v) \in S_A^{(i)}} \pi_{u,v}}, \quad \textbf{for } i = \{1, 2\}
-%     \end{equation*}
-
-%     \only<1>{
-%         \vspace{6.15cm}
-%     }
-    
-%     \pause
-%     \only<3>{
-%         \tiny
-%         \vspace{0.9cm}
-%         \begin{equation*}
-%             P(W_{(u,v)}^{(1)} < t) = 
-%             \begin{cases}
-%                 1 - \sum_{i=0}^{v-1} \frac{1}{i!} e^{-\mu t} (\mu t)^i, 
-%                 & \textbf{if } C = 1 \textbf{ and } v>1 \\
-%                 1 - (\mu C)^{v-C} \mu  
-%                     \sum_{k=1}^{\mid \vec{r} \mid} \sum_{l=1}^{r_k}
-%                     \frac{\Psi_{k,l}(-\lambda_k)t^{r_k - l} 
-%                     e^{-\lambda_k t}}{(r_k - l)! (l - 1)!},
-%                 & \textbf{if } C > 1 \textbf{ and } v > C \\
-%                     \qquad \textbf{where } \vec{r}=(v - C, 1) \textbf{ and } 
-%                     \vec{\lambda}=(C \mu, \mu) &  \\
-%                 1 - e^{-\mu t},  & \textbf{if } v \leq C
-%             \end{cases}
-%         \end{equation*}
-%         \vspace{0.9cm}
-%         \begin{equation*}
-%             P(W_{(u,v)}^{(2)} < t) = 
-%             \begin{cases}
-%                 1 - \sum_{i=0}^{\min(v,T)-1} \frac{1}{i!} e^{-\mu t} (\mu t)^i,  
-%                 & \textbf{if } C = 1 \textbf{ and } v, T > 1 \\
-%                 1 - \mu (\mu C) ^ {\min(v,T) - C} 
-%                     \sum_{k=1}^{\mid \vec{r} \mid} \sum_{l=1}^{r_k} 
-%                     \frac{\Psi_{k,l}(-\lambda_k)t^{r_k - l} 
-%                     e^{-\lambda_k t}}{(r_k - l)! (l - 1)!}, 
-%                 & \textbf{if } C > 1 \textbf{ and } v, T  > C \\
-%                     \qquad \textbf{where } \vec{r}=(\min(v, T) - C, 1) 
-%                     \textbf{ and } \vec{\lambda}=(C \mu, \mu) \\
-%                 1 - e^{-\mu t}, & \textbf{if } v \leq C 
-%                     \textbf{ or } T \leq C \\
-%             \end{cases}
-%         \end{equation*}
-%         \vspace{0.85cm}
-%     }
-    
-%     \only<2>{
-%         \vspace{1cm}
-%         \begin{equation*}
-%             W_{(u,v)}^{(1)} \sim 
-%             \begin{cases}
-%                 \textbf{Erlang}(v, \mu), & \textbf{if } C = 1 \textbf{ and } v>1 \\
-%                 \textbf{Hypo} \left(
-%                     \left[v - C, 1\right], \left[C \mu, \mu \right]
-%                 \right), & \textbf{if } C > 1 \textbf{ and } v>C \\
-%                 \textbf{Erlang}(1, \mu), & \textbf{if } v \leq C
-%             \end{cases}
-%         \end{equation*}
-%         \vspace{1cm}
-%         \begin{equation*}
-%             W_{(u,v)}^{(2)} \sim 
-%             \begin{cases}
-%                 \textbf{Erlang}(\min(v, T), \mu), & \textbf{if } C = 1
-%                     \textbf{ and } v, T > 1 \\
-%                 \textbf{Hypo}\left(
-%                     \left[ \min(v, T) - C, 1 \right], \left[ C \mu, \mu \right]
-%                 \right), & \textbf{if } C > 1 \textbf{ and } v, T  > C \\
-%                 \textbf{Erlang}(1, \mu), & \textbf{if } v \leq C \textbf{ or } T \leq C
-%             \end{cases}
-%         \end{equation*}
-%         \vspace{1cm}
-%     }
-    
-
-% \end{frame}
 
