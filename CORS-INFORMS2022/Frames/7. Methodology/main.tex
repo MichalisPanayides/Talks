@@ -1,0 +1,41 @@
+\begin{frame}
+    \frametitle{Hospital's utility}
+
+    \begin{equation*}
+        U_{T_A,T_B}^{(i)} = 1 - \left[ (P(W^{(i)} < t) - 0.95)^2 \right]
+    \end{equation*}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Game - Payoff matrices}
+
+    \scriptsize
+    \begin{equation*}
+        A = 
+        \begin{pmatrix}
+            U_{1,1}^A & U_{1,2}^A & \dots & U_{1,N_B}^A \\ 
+            U_{2,1}^A & U_{2,2}^A & \dots & U_{2,N_B}^A \\
+            \vdots & \vdots & \ddots & \vdots \\
+            U_{N_A,1}^A & U_{N_A,2}^A & \dots & U_{N_A,N_B}^A \\
+        \end{pmatrix}, \quad
+        B = 
+        \begin{pmatrix}
+            U_{1,1}^B & U_{1,2}^B & \dots & U_{1,N_B}^B \\ 
+            U_{2,1}^B & U_{2,2}^B & \dots & U_{2,N_B}^B \\
+            \vdots & \vdots & \ddots & \vdots \\
+            U_{N_A,1}^B & U_{N_A,2}^B & \dots & U_{N_A,N_B}^B \\
+        \end{pmatrix}
+    \end{equation*}
+
+    \begin{equation*}
+        R = 
+        \begin{pmatrix}
+            p_{1,1} & p_{1,2} & \dots & p_{1,N_B} \\ 
+            p_{2,1} & p_{2,2} & \dots & p_{2,N_B} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            p_{N_A,1} & p_{N_A,2} & \dots & p_{N_A,N_B} \\
+        \end{pmatrix}
+    \end{equation*}
+
+\end{frame}
