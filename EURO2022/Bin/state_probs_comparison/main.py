@@ -7,9 +7,9 @@ lambda_1 = 1
 lambda_2 = 1
 mu = 1
 num_of_servers = 3
-threshold = 2
-system_capacity = 4
-buffer_capacity = 2
+threshold = 3
+system_capacity = 6
+buffer_capacity = 4
 
 all_states = abg.markov.build_states(
     threshold=threshold,
@@ -56,51 +56,51 @@ diff_states_probabilities_array = (
 )
 
 plt.figure(figsize=(6, 4))
-plt.imshow(sim_state_probabilities_array, cmap="Blues")
+plt.imshow(sim_state_probabilities_array, cmap="YlOrBr", vmin=0, vmax=0.4)
 for i in range(sim_state_probabilities_array.shape[0]):
     for j in range(sim_state_probabilities_array.shape[1]):
         if not np.isnan(sim_state_probabilities_array[i, j]):
             plt.text(
                 j,
                 i,
-                "{:.2f}".format(sim_state_probabilities_array[i, j]),
+                "{:.3f}".format(sim_state_probabilities_array[i, j]),
                 ha="center",
                 va="center",
-                color="chocolate",
-                fontsize=15,
+                color="black",
+                fontsize=10,
             )
 plt.title("Simulation", fontsize=11, fontweight="bold")
-plt.yticks([0, 1, 2])
-plt.xlabel("Queue 2", fontsize=11, fontweight="bold")
-plt.ylabel("Queue 1", fontsize=11, fontweight="bold")
+plt.yticks([i for i in range(buffer_capacity + 1)])
+plt.xlabel("Parking (v)", fontsize=11, fontweight="bold")
+plt.ylabel("Hospital (u)", fontsize=11, fontweight="bold")
 plt.colorbar()
 plt.savefig("simulation.png", transparent=True)
 
 
 plt.figure(figsize=(6, 4))
-plt.imshow(markov_state_probabilities_array, cmap="Blues")
+plt.imshow(markov_state_probabilities_array, cmap="YlOrBr", vmin=0, vmax=0.4)
 for i in range(markov_state_probabilities_array.shape[0]):
     for j in range(markov_state_probabilities_array.shape[1]):
         if not np.isnan(markov_state_probabilities_array[i, j]):
             plt.text(
                 j,
                 i,
-                "{:.2f}".format(markov_state_probabilities_array[i, j]),
+                "{:.3f}".format(markov_state_probabilities_array[i, j]),
                 ha="center",
                 va="center",
-                color="chocolate",
-                fontsize=15,
+                color="black",
+                fontsize=10,
             )
 plt.title("Markov chain", fontsize=11, fontweight="bold")
-plt.yticks([0, 1, 2])
-plt.xlabel("Queue 2", fontsize=11, fontweight="bold")
-plt.ylabel("Queue 1", fontsize=11, fontweight="bold")
+plt.yticks([i for i in range(buffer_capacity + 1)])
+plt.xlabel("Parking (v)", fontsize=11, fontweight="bold")
+plt.ylabel("Hospital (u)", fontsize=11, fontweight="bold")
 plt.colorbar()
 plt.savefig("markov.png", transparent=True)
 
 
 plt.figure(figsize=(6, 4))
-plt.imshow(diff_states_probabilities_array, cmap="Blues")
+plt.imshow(diff_states_probabilities_array, cmap="YlOrBr", vmin=-0.003, vmax=0.003)
 for i in range(diff_states_probabilities_array.shape[0]):
     for j in range(diff_states_probabilities_array.shape[1]):
         if not np.isnan(diff_states_probabilities_array[i, j]):
@@ -111,11 +111,11 @@ for i in range(diff_states_probabilities_array.shape[0]):
                 ha="center",
                 va="center",
                 color="chocolate",
-                fontsize=14,
+                fontsize=8,
             )
 plt.title("Differences", fontsize=11, fontweight="bold")
-plt.yticks([0, 1, 2])
-plt.xlabel("Queue 2", fontsize=11, fontweight="bold")
-plt.ylabel("Queue 1", fontsize=11, fontweight="bold")
+plt.yticks([i for i in range(buffer_capacity + 1)])
+plt.xlabel("Parking (v)", fontsize=11, fontweight="bold")
+plt.ylabel("Hospital (u)", fontsize=11, fontweight="bold")
 plt.colorbar()
 plt.savefig("diff.png", transparent=True)
