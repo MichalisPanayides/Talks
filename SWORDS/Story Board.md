@@ -1,6 +1,5 @@
 # **Story Board**:
 
-
 ## 1. Intro
 - About me
 - My PhD - queueing model + game model
@@ -9,14 +8,15 @@
 - Ambulances wait for a long time outside of hospitals (blocked)
   - Good: Patients have their own paramedic
   - Bad: Ambulances blocked - can't get more patients
-- From patient's perspective two queues (one outside + one inside)
 - NHS: regulations - patients need to be seen within 4 hours
 - Hospital's strategy: Delay the timer
+- From patient's perspective two queues (one outside + one inside)
 
 ## 3. Markov chain formulation
 - My network
   - Structure
   - Parameters
+  - DES
 - Markov chain (untruncated):
   - Two queues - states: (u, v)
   - Threshold
@@ -26,7 +26,6 @@
   - Markov chain VS Diagrammatic representation
 
 ## 4. Generator matrix - Steady state - Performance measures
-- Generator matrix
 - Steady state probabilities
 - Blocking time
 - Proportion of individuals within target
@@ -76,21 +75,5 @@
   - Inefficiencies go even lower
   - **Punch line**
 
-## 8. Reinforcement Learning
-- Last thing we thought interesting - RL
-- Use just the queueing model
-- Servers choose their service rate based on maximising some utility function
-- Assume:
-  - Four servers (custom priority)
-  - Choose rates s.t
-  - Maximise (Idle time) + (Lost inds) -- (can be anything)
-- PLOTS:
-  - LEFT: Utilities over time
-  - RIGHT: Server rates over time
-  - At some point flood system and then fix it
-  - Interesting:
-    - Servers try to handle the demand but cannot
-    - Servers remember their rates
-
-## 9. Picture slide
+## 8. Picture slide
 - Thank you
