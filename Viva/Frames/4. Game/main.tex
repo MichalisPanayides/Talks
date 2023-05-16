@@ -1,0 +1,265 @@
+\begin{frame}
+    \frametitle{4. Game theoretic model - Outline}
+    \centering
+    \scalebox{-1}[1]{\includegraphics[scale=0.35]{Bin/articles/ambulance_queue.jpg}}
+    \vspace{0.2cm}
+
+    \scalebox{-1}[1]{\includegraphics[scale=0.35]{Bin/articles/ambulance_queue.jpg}}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{4. Game theoretic model - Outline}
+
+    \begin{minipage}{.35\textwidth}
+        \begin{figure}
+            \begin{tikzpicture}
+                \draw[ultra thick] (0.75,2) ellipse (0.8cm and 2.5cm);
+                \node[blue] at (0.7, 5) {\( B \)};
+                \draw[-] (0.5, 2) -- ++(-1, 0) node[left] {\(\lambda_2\)};
+                
+                % p_A line
+                \path (0.49, 2) edge [bend right=30] (1.2, 2.5);
+                \path (1.2, 2.5) edge [bend left=30] (1.7, 2.7);
+                \draw[->] (1.7, 2.7) -- ++(0.6, 0.);
+                
+                % p_B
+                \path (0.49, 2) edge [bend left=30] (1.2, 0.9);
+                \path (1.2, 0.91) edge [bend right=30] (1.7, 0.47);
+                \draw[->] (1.7, 0.47) -- ++(0.6, 0.);
+
+
+                \node at (0.7, 2.3) {\small{\( p_A \)}};
+                \node at (0.7, 1.4) {\small{\( p_B \)}};
+
+            \end{tikzpicture}
+        \end{figure}
+    \end{minipage}
+    \begin{minipage}{.6\textwidth}
+        \begin{figure}
+            \begin{tikzpicture}
+                \node[blue] at (0, 0) {\( P(W < t) \)};
+            \end{tikzpicture}
+            \scalebox{.8}{
+                \begin{tikzpicture}[>=stealth, scale=0.6]
+                    % the rectangle with vertical rules (Queue 1)
+                    \draw (1,0) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+                    \foreach \i in {1,...,4}
+                    \draw (3cm-\i*10pt,0) -- +(0,-1.5cm);
+         
+                    % the rectangle with vertical rules (Queue 2)
+                    \draw (5,1.25) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+                    \foreach \i in {1,...,4, 5.7}
+                    \draw (7cm-\i*10pt,1.25) -- +(0,-1.5cm);
+    
+                    % The two vertical lines at the very start of Queue 2 
+                    \draw (7cm-54pt, 1.2) -- +(0, -0.5cm);
+                    \draw (7cm-54pt, 0.3) -- +(0, -0.5cm);        
+                    \draw (7cm-51pt, 1.1) -- +(0, -0.4cm);
+                    \draw (7cm-51pt, 0.3) -- +(0, -0.4cm);
+            
+                    % The label between the lines for T
+                    \node[anchor=north] at (5.2, 0.84) {\tiny{\( T_A \)}};
+    
+                    % the circle (Queue 2)
+                    \draw (7.75,0.5) circle [radius=0.75cm];
+            
+                    % the arrows and labels (Queue 1+2)
+                    \draw[->] (8.5,0.525) -- +(20pt,0);
+                    \node[align=center] at (1cm,-2cm) {};
+                    \node[align=center] at (6cm,-0.75cm) {};
+                    
+                    % Ambulance lines
+                    \draw[<-] (1,-0.75) -- +(-70pt,0) node[left] {\( p_A \lambda_2 \)};
+                    % \draw[-] (3.5,-0.75) -- +(20pt,0);
+                    \draw[-] (3,-0.75) -- (4.2,-0.75);
+                    \draw (4.2, 0.525) -- (4.2, -0.75);
+    
+                    % Others lines
+                    \draw (4.2, 1.8) -- +(-169.5pt,0) node[left] {\( \lambda_1^A \)};
+                    \draw (4.2, 1.8) -- (4.2, 0.525);
+                    \draw[->] (4.2, 0.525) -- (5, 0.525);
+                \end{tikzpicture}
+            }
+            \scalebox{.8}{
+                \begin{tikzpicture}[>=stealth, scale=0.6] %arrow type
+                    % the rectangle with vertical rules (Queue 1)
+                    \draw (1,0) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+                    \foreach \i in {1,...,4}
+                    \draw (3cm-\i*10pt,0) -- +(0,-1.5cm);
+                                
+                    % the rectangle with vertical rules (Queue 2)
+                    \draw (5,1.25) -- ++(2cm,0) -- ++(0,-1.5cm) -- ++(-2cm,0);
+                    \foreach \i in {1,...,4, 5.7}
+                    \draw (7cm-\i*10pt,1.25) -- +(0,-1.5cm);
+    
+                    % The two vertical lines at the very start of Queue 2 
+                    \draw (7cm-54pt,1.2) -- +(0,-0.5cm);
+                    \draw (7cm-54pt,0.3) -- +(0,-0.5cm);        
+                    \draw (7cm-51pt,1.1) -- +(0,-0.4cm);
+                    \draw (7cm-51pt,0.3) -- +(0,-0.4cm);
+            
+                    % The label between the lines for T
+                    \node[anchor=north] at (5.2, 0.84) {\tiny{\( T_B \)}};
+    
+                    % the circle (Queue 2)
+                    \draw (7.75,0.5) circle [radius=0.75cm];
+            
+                    % the arrows and labels (Queue 1+2)
+                    \draw[->] (8.5,0.525) -- +(20pt,0);
+                    \node[align=center] at (1cm,-2cm) {};
+                    \node[align=center] at (6cm,-0.75cm) {};
+                    
+                    % Ambulance lines
+                    \draw[<-] (1,-0.75) -- +(-70pt,0) node[left] {\( p_B \lambda_2 \)};
+                    \draw[-] (3,-0.75) -- (4.2,-0.75);
+                    \draw (4.2, 0.525) -- (4.2, -0.75);
+    
+                    % Others lines
+                    \draw (4.2, 1.8) -- +(-169.5pt,0) node[left] {\( \lambda_1^B \)};
+                    \draw (4.2, 1.8) -- (4.2, 0.525);
+                    \draw[->] (4.2, 0.525) -- (5, 0.525);
+                \end{tikzpicture}
+            }
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{4. Game theoretic model - Players, Strategies, Objectives}
+    \centering
+
+    \includegraphics[scale=0.1]{Bin/game_avatars/ambulance_cartoon.png}
+    \hspace{2cm}
+    \includegraphics[scale=0.1]{Bin/game_avatars/hospital.png}
+    \hspace{2cm}
+    \includegraphics[scale=0.1]{Bin/game_avatars/hospital.png}
+
+    \vspace{1cm}
+    \includegraphics[scale=0.2]{Bin/game_avatars/arrows.png}
+    \hspace{2cm}
+    \includegraphics[scale=0.04]{Bin/game_avatars/door.png}
+    \hspace{2cm}
+    \includegraphics[scale=0.04]{Bin/game_avatars/door.png}
+
+    \(p_A, p_B \in [0, 1] \hspace{2cm} T_A \in [1, N_A] 
+    \hspace{2cm} T_B \in [1, N_B]\)    
+    \(p_A + p_B = 1 \hspace{8cm}\)
+    
+    \vspace{1cm}
+    \small
+    \(
+        \qquad \min B \hspace{2.1cm} P(W^{(A)} < t) > 0.95 
+        \hspace{1cm} P(W^{(B)} < t) > 0.95
+    \)
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{4. Game theoretic model - Imperfect information game}
+    \centering
+
+    \begin{figure}[ht]
+        \centering
+        \begin{tikzpicture}[-, node distance = 3cm, scale=0.8]
+
+            \draw[thick] (-0.4, -2.7) -- (-0.4, 2.2) -- (7.68, 2.2) -- (7.68, -2.7) -- (-0.4, -2.7);
+            \node[anchor=north](HA){\scriptsize{\(H_A\)}};
+            \node[anchor=north](HA_d1) at (3, 2){.};
+            \node[anchor=north](HA_d2) at (3, -2){.};
+        
+            \path[->] (HA) edge node {}(HA_d1);
+            \path[->] (HA) edge node {}(HA_d2);
+            \path (HA_d1) edge [bend left] node {}(HA_d2);
+            \path (HA_d1) [dashed] edge node {}(HA_d2);
+        
+            \node[anchor=north](HB) at (4.1, 0){\scriptsize{\(H_B\)}};
+            \node[anchor=north](HB_d1) at (6.9, 2){.};
+            \node[anchor=north](HB_d2) at (6.9, -2){.};
+        
+            \path[->] (HB) edge node {}(HB_d1);
+            \path[->] (HB) edge node {}(HB_d2);
+            \path(HB_d1) edge [bend left] node {}(HB_d2);
+        
+            \node[anchor=north](D) at (7.9, 0){\scriptsize{\(A\)}};
+            \node[anchor=north](D_d1) at (10.8, 2){.};
+            \node[anchor=north](D_d2) at (10.8, -2){.};
+            
+            \path[->] (D) edge node {}(D_d1);
+            \path[->] (D) edge node {}(D_d2);
+            \path(D_d1) edge [bend left] node {}(D_d2);
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{4. Game theoretic model - Utilities}
+
+    \begin{equation*}
+        U_{T_A,T_B}^{(i)} = 1 - \left[ (P(W^{(i)} < t) - 0.95)^2 \right]
+    \end{equation*}
+
+    \scriptsize
+    \begin{equation*}
+        A = 
+        \begin{pmatrix}
+            U_{1,1}^A & U_{1,2}^A & \dots & U_{1,N_B}^A \\ 
+            U_{2,1}^A & U_{2,2}^A & \dots & U_{2,N_B}^A \\
+            \vdots & \vdots & \ddots & \vdots \\
+            U_{N_A,1}^A & U_{N_A,2}^A & \dots & U_{N_A,N_B}^A \\
+        \end{pmatrix}, \quad
+        B = 
+        \begin{pmatrix}
+            U_{1,1}^B & U_{1,2}^B & \dots & U_{1,N_B}^B \\ 
+            U_{2,1}^B & U_{2,2}^B & \dots & U_{2,N_B}^B \\
+            \vdots & \vdots & \ddots & \vdots \\
+            U_{N_A,1}^B & U_{N_A,2}^B & \dots & U_{N_A,N_B}^B \\
+        \end{pmatrix}
+    \end{equation*}
+
+    \vspace{1cm}
+
+    \begin{equation*}
+        R = 
+        \begin{pmatrix}
+            p_{1,1} & p_{1,2} & \dots & p_{1,N_B} \\ 
+            p_{2,1} & p_{2,2} & \dots & p_{2,N_B} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            p_{N_A,1} & p_{N_A,2} & \dots & p_{N_A,N_B} \\
+        \end{pmatrix}
+    \end{equation*}
+
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{4. Game theoretic model - Asymmetric replicator Dynamics}
+    \centering
+    \begin{equation*}
+        \frac{dx}{dt}_i = x_i((f_x)_i - \phi_x), \quad \text{ for all }i
+    \end{equation*}
+
+    \begin{equation*}
+        \frac{dy}{dt}_i = y_i((f_y)_i - \phi_y), \quad \text{ for all }i
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{4. Game theoretic model - Compartmentalised price of anarchy}
+
+    \begin{equation*}
+        PoA = \frac{\max_{s \in E} Cost(s)}{\min_{s \in S} Cost(S)}
+    \end{equation*}
+
+    \footnotesize
+    \vspace{1cm}
+    \begin{equation*}
+        PoA_A(s_r) = \frac{Cost(s_r)}{\min_{s \in S} Cost(S)}, \hspace{1cm} 
+        PoA_B(s_c) = \frac{Cost(s_c)}{\min_{s \in S} Cost(S)}
+    \end{equation*}
+\end{frame}
