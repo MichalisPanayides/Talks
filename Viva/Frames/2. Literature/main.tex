@@ -1,0 +1,30 @@
+\begin{frame}
+    \frametitle{2. Literature Review}
+
+    \centering
+    \begin{tikzpicture}
+
+        \tikzmath{
+            let \ellipsex = 2;
+            let \ellipsey = 1;
+            let \posx = 2.5;
+            let \posy = 1.5;
+        }
+
+        \draw (-\posx,\posy) ellipse (\ellipsex cm and \ellipsey cm);
+        \node at (-\posx,\posy) {\small \textbf{OR in Healthcare}};
+
+        \draw (\posx,\posy) ellipse (\ellipsex cm and \ellipsey cm);
+        \node at (\posx, \posy + 0.2) {\small \textbf{Game Theory and}};
+        \node at (\posx, \posy - 0.2) {\small \textbf{Queueing Theory}};
+
+        \draw (-\posx, -\posy) ellipse (\ellipsex cm and \ellipsey cm);
+        \node at (-\posx, -\posy + 0.2) {\small \textbf{Game Theory in}};
+        \node at (-\posx, -\posy - 0.2) {\small \textbf{Healthcare}};
+
+        \draw (\posx,-\posy) ellipse (\ellipsex cm and \ellipsey cm);
+        \node at (\posx,-\posy) {\small \textbf{Behavioural OR}};
+    \end{tikzpicture}
+
+\end{frame}
+
