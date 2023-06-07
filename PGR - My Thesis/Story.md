@@ -3,7 +3,8 @@
 - Cardiff University, THIS
 - Supervisors
 - Any questions, feel free to interrupt me
-- Structure: Game theory + Ambulance Application (together)
+- Structure: Game theory + Play a game + Ambulance Application
+- Not sure how long this will take
 
 # GAME THEORY
 ## Game theory intro
@@ -29,7 +30,7 @@
 
 ## Strategies
 - Cooperator, Defector, Tit-for-tat
-- Axelrod tournament
+- Axelrod + Axelrod's tournament
 
 ## Solving the game
 - Nash equilibrium
