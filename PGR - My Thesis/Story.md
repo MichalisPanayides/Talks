@@ -1,24 +1,23 @@
 # Me
-- 4th year PhD student in Maths
-- Cardiff University, THIS
-- Supervisors
-- Any questions, feel free to interrupt me
+- Name: Michalis
 - Structure: Game theory + Play a game + Ambulance Application
-- Not sure how long this will take
+- Any questions, feel free to interrupt me
 
 # GAME THEORY
 ## Game theory intro
 - General: study of mathematical models of strategic interaction between rational agents
-- Players, Strategies, Utilities
 - Normal form games
+- Players, Strategies, Utilities
 
 ## Rock, Paper, Scissors example
 - Players, Strategies, Utilities
 
 ## Prisoner's Dilemma game
-- Explain the game
-- Formulate the game
+- Stage game
+  - Explain the game
+  - Analyse the game
 - Explain repeated games
+- Formulate the game
 - Divide to teams and play game - RULES:
   - Clearly explain all outcomes: CC, DD, CD, DC
   - Everyone plays with everyone
@@ -30,13 +29,15 @@
 
 ## Strategies
 - Cooperator, Defector, Tit-for-tat
-- Axelrod + Axelrod's tournament
+- Robert Axelrod + Axelrod's tournament
 
 ## Solving the game
 - Nash equilibrium
 - Learning algorithms
   - Evolutionary stable strategies
   - Asymmetric replicator dynamics
+
+
 
 
 # AMBULANCE APPLICATION
@@ -58,16 +59,9 @@
 - Reducing to normal-form game
 - Utility of the hospitals
 
-## Nash equilibrium and asymmetric replicator dynamics
-- N.E. algorithms
-- Learning algorithms
-  - Fictitious play: iterative learning algorithm
-
 ## Nash equilibrium
 - Example
 - Strategies: T = (1, 2, 3, 4)
-- All N.E using support enumeration and Lemke-Howson algorithm
-
 
 ## Replicator dynamics
 - Used to express the evolutionary dynamics of a population of entities
